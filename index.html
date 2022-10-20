@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Slides</title>
+    <style>
+        .topbar {
+            overflow: hidden;
+            background-color: #94A4A5;
+        }
+        a {
+            background-color: #7B9089;
+            float: left;
+            color: #e3f9f8;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        a:hover {
+            background-color: #21302e;
+            color: #bad8d7;
+            cursor: pointer;
+        }
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 17px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 10px;
+            padding: 0%;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            background-color: #dbdbdb;
+        }
+        #windows {
+            bottom: 0;
+            display: flex;
+        }
+        textarea {
+            outline: none;
+            resize: none;
+            overflow: auto;
+            border: #aaa solid 3px;
+            float: left;
+            padding: 6px;
+            margin: 5px;
+            height: 100vh;
+            width: 50%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+        }
+        .selected {
+            border: solid blue;
+        }
+        .notselected {
+            border: dashed violet;
+        }
+        #content {
+            margin-right: 2.5px;
+            background-color: #ebebeb;
+        }
+        #script {
+            margin-left: 2.5px;
+            background-color: #142642;
+            color: white;
+        }
+        #script::placeholder {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a onclick="toggleScript()">Script</a>
+        <a onclick="toggleMode()">Mode</a>
+        <p><b>Mode:</b>&nbsp&nbspEditing</p>
+    </div>
+    <div id="windows">
+        <textarea wrap="off" id="content" placeholder="Enter Math Content Here.."></textarea>
+        <textarea wrap="off" id="script" placeholder="Enter Script Content Here.."></textarea>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
