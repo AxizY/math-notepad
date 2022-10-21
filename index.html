@@ -42,10 +42,10 @@
             background-color: #dbdbdb;
         }
         #windows {
-            bottom: 0;
             display: flex;
+            height: 92vh;
         }
-        textarea {
+        .textbox {
             outline: none;
             resize: none;
             overflow: auto;
@@ -53,9 +53,8 @@
             float: left;
             padding: 6px;
             margin: 5px;
-            height: 100vh;
             width: 50%;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
         }
         .selected {
@@ -85,8 +84,8 @@
         <p><b>Mode:</b>&nbsp&nbspEditing</p>
     </div>
     <div id="windows">
-        <textarea wrap="off" id="content" placeholder="Enter Math Content Here.."></textarea>
-        <textarea wrap="off" id="script" placeholder="Enter Script Content Here.."></textarea>
+        <div class="textbox" id="content" contenteditable="true"></div>
+        <div class="textbox" id="script" contenteditable="true"></div>
     </div>
     <script src="app.js"></script>
 </body>
