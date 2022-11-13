@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Math Slides</title>
     <style>
         .topbar {
@@ -24,7 +25,7 @@
             color: #bad8d7;
             cursor: pointer;
         }
-        p {
+        .title {
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -43,25 +44,23 @@
         }
         #windows {
             display: flex;
-            height: 92vh;
+            height: calc(100vh - 3.1rem);
+        }
+        span {
+            background-color: crimson;
         }
         .textbox {
             outline: none;
             resize: none;
-            overflow: auto;
             border: #aaa solid 3px;
-            float: left;
             padding: 6px;
             margin: 5px;
             width: 50%;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 30px;
-        }
-        .selected {
-            border: solid blue;
-        }
-        .notselected {
-            border: dashed violet;
+            font-size: 20px;
+            display: inline-block;
+            overflow-wrap: break-all;
+            overflow: hidden;
         }
         #content {
             margin-right: 2.5px;
@@ -81,7 +80,7 @@
     <div class="topbar">
         <a onclick="toggleScript()">Script</a>
         <a onclick="toggleMode()">Mode</a>
-        <p><b>Mode:</b>&nbsp&nbspEditing</p>
+        <p class="title"><b>Mode:</b>&nbsp&nbspEditing</p>
     </div>
     <div id="windows">
         <div class="textbox" id="content" contenteditable="true"></div>
